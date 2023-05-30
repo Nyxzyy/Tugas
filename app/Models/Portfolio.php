@@ -14,5 +14,6 @@ class Portfolio extends Model
         'file_url',
         'title',
         'description',
+        'category_id',
     ];
 }

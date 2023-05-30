@@ -144,6 +144,7 @@
                 <input type="text" id="file_url" name="file_url" placeholder="Image Url" value= "{{ $temp ? $temp['file_url'] : "" }}"required/>
                 <input type="text" id="title" name="title" placeholder="Title" value= "{{ $temp ? $temp['title'] : "" }}" required/>
                 <input type="text" id="description" name="description" placeholder="Description" value= "{{ $temp ? $temp['description'] : ""}}"/>
+                <input type="int" id="description" name="category_id" placeholder="Category" value= "{{ $temp ? $temp['category_id'] : ""}}"/>
                 <button type="submit">Submit</button>
             </form>
         @else
@@ -152,6 +153,7 @@
                 <input type="text" id="file_url" name="file_url" placeholder="Image Url" required/>
                 <input type="text" id="title" name="title" placeholder="Title" required/>
                 <input type="text" id="description" name="description" placeholder="Description" />
+                <input type="int" id="description" name="category_id" placeholder="Category" />
                 <button type="submit">Submit</button>
             </form>
         @endif

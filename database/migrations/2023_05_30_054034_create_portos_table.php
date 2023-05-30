@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('porto', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->string('file_url',1000);
             $table->string('title');
             $table->string('description',1000)->nullable();
