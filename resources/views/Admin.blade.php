@@ -11,7 +11,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>AdminLTE 3 | Starter</title>
+
 
         <!-- Google Font: Source Sans Pro -->
         <link rel="stylesheet"
@@ -34,11 +34,11 @@
                         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
                                 class="fas fa-bars"></i></a>
                     </li>
-                    <li class="nav-item d-none d-sm-inline-block">
+                    {{-- <li class="nav-item d-none d-sm-inline-block">
                         <a href="index3.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item d-none d-sm-inline-block">
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="#" class="nav-link">Contact</a> --}}
                     </li>
                 </ul>
 
@@ -67,7 +67,7 @@
                         </div>
                     </li>
 
-                   
+
 
                     </li>
                     <!-- Notifications Dropdown Menu -->
@@ -79,11 +79,11 @@
             <!-- Main Sidebar Container -->
             <aside class="main-sidebar sidebar-dark-primary elevation-4">
                 <!-- Brand Logo -->
-                <a href="index3.html" class="brand-link">
+                {{-- <a href="index3.html" class="brand-link">
                     <img src="{{ asset('AdminLTE/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
                         class="brand-image img-circle elevation-3" style="opacity: .8">
                     <span class="brand-text font-weight-light">AdminLTE 3</span>
-                </a>
+                </a> --}}
 
                 <!-- Sidebar -->
                 <div class="sidebar">
@@ -94,11 +94,11 @@
                                 alt="User Image">
                         </div>
                         <div class="info">
-                            <a href="#" class="d-block">Alexander Pierce</a>
+                            <a href="#" class="d-block">Theodorus AV</a>
                         </div>
                     </div>
 
-                    <!-- SidebarSearch Form -->
+                    {{-- <!-- SidebarSearch Form -->
                     <div class="form-inline">
                         <div class="input-group" data-widget="sidebar-search">
                             <input class="form-control form-control-sidebar" type="search" placeholder="Search"
@@ -109,7 +109,7 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <!-- Sidebar Menu -->
                     <nav class="mt-2">
@@ -117,7 +117,7 @@
                             data-accordion="false">
                             <!-- Add icons to the links using the .nav-icon class
                    with font-awesome or any other icon font library -->
-                            <li class="nav-item menu-open">
+                            {{-- <li class="nav-item menu-open">
                                 <a href="#" class="nav-link active">
                                     <i class="nav-icon fas fa-tachometer-alt"></i>
                                     <p>
@@ -135,18 +135,29 @@
                                     <li class="nav-item">
                                         <a href="#" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Inactive Page</p>
+                                            <p>Portofolio</p>
                                         </a>
                                     </li>
                                 </ul>
+                            </li> --}}
+                            <li class="nav-item">
+                                <a href="/Admin/Porto" class="nav-link">
+                                    <i class="nav-icon fas fa-th"></i>
+                                    <p >
+                                        Portofolio
+                                        {{-- <span class="right badge badge-danger">New</span> --}}
+                                    </p>
+
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/Admin/category" class="nav-link">
                                     <i class="nav-icon fas fa-th"></i>
                                     <p>
-                                        Simple Link
-                                        <span class="right badge badge-danger">New</span>
+                                        Category
+                                        {{-- <span class="right badge badge-danger">New</span> --}}
                                     </p>
+
                                 </a>
                             </li>
                         </ul>
@@ -180,8 +191,8 @@
                 <div class="content">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <div class="card">
+                            <div class="col-lg-10">
+                                {{-- <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Create or add photo</h5>
 
@@ -191,9 +202,9 @@
 
                                         <a href="/Admin/Porto" class="card-link">Create link</a>
                                     </div>
-                                </div>
+                                </div> --}}
 
-                                <div class="card card-primary card-outline">
+                                {{-- <div class="card card-primary card-outline">
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
 
@@ -206,9 +217,9 @@
                                         <a href="#" class="card-link">Another link</a>
                                     </div>
                                 </div><!-- /.card -->
-                            </div>
+                            </div> --}}
                             <!-- /.col-md-6 -->
-                            <div class="col-lg-6">
+                            {{-- <div class="col-lg-6">
                                 <div class="card">
                                     <div class="card-header">
                                         <h5 class="m-0">Featured</h5>
@@ -220,12 +231,12 @@
                                             content.</p>
                                         <a href="#" class="btn btn-primary">Go somewhere</a>
                                     </div>
-                                </div>
+                                </div> --}}
 
                                 <div class="card card-primary card-outline">
-                                    <div class="card-header">
+                                    {{-- <div class="card-header">
                                         <h5 class="m-0">Featured</h5>
-                                    </div>
+                                    </div> --}}
                                     <div class="card-body">
                                         <h6 class="card-title">Table Data</h6>
 
@@ -238,6 +249,7 @@
                                             <th>Title</th>
                                             <th>Description</th>
                                             <th>Category</th>
+
                                             <th>Delete data</th>
                                             <th>Update data</th>
                                         </tr>
@@ -256,7 +268,7 @@
                                                         action="{{ route('delete_porto', ['id' => $dat['id']]) }}">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button class="btn btn-delete">
+                                                        <button class="btn btn-danger">
                                                             <span class="mdi mdi-delete mdi-24px"></span>
                                                             <span class="mdi mdi-delete-empty mdi-24px"></span>
                                                             <span>Delete</span>
@@ -269,7 +281,7 @@
                                                         action="{{ route('form_update_porto', ['id' => $dat['id']]) }}">
                                                         @csrf
 
-                                                        <button class="btn btn-delete">
+                                                        <button class="btn btn-primary">
                                                             <span class="mdi mdi-delete mdi-24px"></span>
                                                             <span class="mdi mdi-delete-empty mdi-24px"></span>
                                                             <span>Update</span>
@@ -302,7 +314,7 @@
             <!-- /.control-sidebar -->
 
             <!-- Main Footer -->
-            <footer class="main-footer">
+            {{-- <footer class="main-footer">
                 <!-- To the right -->
                 <div class="float-right d-none d-sm-inline">
                     Anything you want
@@ -310,7 +322,7 @@
                 <!-- Default to the left -->
                 <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
                 reserved.
-            </footer>
+            </footer> --}}
         </div>
         <!-- ./wrapper -->
 
